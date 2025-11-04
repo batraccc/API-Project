@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2rem;
+    color: #F4F4F4;
+    padding-left: 20px;
+}
+
+#nav-bar{
+    background-color: #0C2B4E;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.currency-table {
+    width: 600px;
+    height: fit-content;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 5px solid #1D546C;
+}
+.currency-table thead{
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    color: #e0e6ed;
+}
+.currency-table th,
+.currency-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e6ed;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    color: #1D546C;
+}
+
+.currency-table th {
+    background-color: #1D546C;
+    color: #ffffff;
+}
+
+.currency-table tbody tr {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Flag slike */
+.currency-table .flag {
+    width: 24px;
+    height: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Animirani hover efekt */
+.currency-table tbody tr::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #1D546C;
+    transition: width 0.1s ease, left 0.1s ease;
+}
+
+.currency-table tbody tr:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+#main{
+    padding-top: 200px;
+}

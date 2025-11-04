@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>Currency Mate</title>
+</head>
+<body>
+    <% if(locals.content){ %>
+        <div id="nav-bar">
+            <h1>Currency Mate</h1>
+        </div>
+        <div id="main">
+            <div id="currency-rates" class="block">
+                <table class="currency-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Currency</th>
+                            <th>Code</th>
+                            <th>Exchange Rate (EUR)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><img src="images\Flag_of_the_United_States.svg.webp" alt="USD" class="flag"> US Dollar</td>
+                            <td>USD</td>
+                            <td><%= content.rates["USD"] %></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><img src="images\Flag_of_Europe.svg.png" alt="EUR" class="flag"> Euro</td>
+                            <td>EUR</td>
+                            <td>1.0000</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><img src="images\Flag_of_the_United_Kingdom.svg.webp" alt="GBP" class="flag"> British Pound</td>
+                            <td>GBP</td>
+                            <td><%= content.rates["GBP"] %></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><img src="images\Flag_of_Japan.svg.webp" alt="JPY" class="flag"> Japanese Yen</td>
+                            <td>JPY</td>
+                            <td><%= content.rates["JPY"] %></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><img src="images\Flag_of_Switzerland.svg.png" alt="CHF" class="flag"> Swiss Franc</td>
+                            <td>CHF</td>
+                            <td><%= content.rates["CHF"] %></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><img src="images\Flag_of_Canada_(Pantone).svg" alt="CAD" class="flag"> Canadian Dollar</td>
+                            <td>CAD</td>
+                            <td><%= content.rates["CAD"] %></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><img src="public\images\Flag_of_Australia.svg" alt="AUD" class="flag"> Australian Dollar</td>
+                            <td>AUD</td>
+                            <td><%= content.rates["AUD"] %></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><img src="images\Flag_of_New_Zealand.svg.png" alt="NZD" class="flag"> New Zealand Dollar</td>
+                            <td>NZD</td>
+                            <td><%= content.rates["NZD"] %></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td><img src="images\Flag_of_Hong_Kong.svg.webp" alt="HKD" class="flag"> Hong Kong Dollar</td>
+                            <td>HKD</td>
+                            <td><%= content.rates["HKD"] %></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td><img src="images\Flag_of_Mexico.svg.png" alt="MXN" class="flag"> Mexican Peso</td>
+                            <td>MXN</td>
+                            <td><%= content.rates["MXN"] %></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="rates-chart" class="block">
+
+            </div>
+            <div id="converter" class="block">
+
+            </div>
+        </div>
+    <% } %>
+    <script src="/js/index.js"></script>
+</body>
+</html>
