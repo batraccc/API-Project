@@ -64,7 +64,7 @@
                         </tr>
                         <tr>
                             <td>7</td>
-                            <td><img src="public\images\Flag_of_Australia.svg" alt="AUD" class="flag"> Australian Dollar</td>
+                            <td><img src="images\Flag_of_Australia.png" alt="AUD" class="flag"> Australian Dollar</td>
                             <td>AUD</td>
                             <td><%= content.rates["AUD"] %></td>
                         </tr>
@@ -94,11 +94,11 @@
             </div>
             <div id="converter" class="block">
                 <form action="calculate" method="POST">
-                    <label>From</label>
+                    <label>From</label><br>
                     <input type="text" name="from"><br>
-                    <label>Amount</label>
+                    <label>Amount</label><br>
                     <input type="text" name="from_amount"><br>
-                    <label>To</label>
+                    <label>To</label><br>
                     <input type="text" name="to"><br>
                     <button type="submit">Calculate</button>
                     <% if (locals.total){ %>
