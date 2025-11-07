@@ -93,7 +93,18 @@
 
             </div>
             <div id="converter" class="block">
-
+                <form action="calculate" method="POST">
+                    <label>From</label>
+                    <input type="text" name="from"><br>
+                    <label>Amount</label>
+                    <input type="text" name="from_amount"><br>
+                    <label>To</label>
+                    <input type="text" name="to"><br>
+                    <button type="submit">Calculate</button>
+                    <% if (locals.total){ %>
+                        <p><%= total %></p>
+                    <% } %>
+                </form>
             </div>
         </div>
     <% } %>
